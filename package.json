@@ -10,15 +10,11 @@
     "axios": "^1.12.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^2.2.0",
-<<<<<<< HEAD
     "compression": "^1.8.1",
-=======
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
-<<<<<<< HEAD
     "express-rate-limit": "^8.1.0",
     "git": "^0.1.5",
     "helmet": "^8.1.0",
@@ -30,14 +26,6 @@
     "nodemailer": "^7.0.9",
     "razorpay": "^2.9.6",
     "uuid": "^8.3.2"
-=======
-    "git": "^0.1.5",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.8.7",
-    "multer": "^2.0.2",
-    "nodemailer": "^7.0.9",
-    "razorpay": "^2.9.6"
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
