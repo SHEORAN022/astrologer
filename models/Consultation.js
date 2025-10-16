@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const mongoose = require("mongoose");
 
 // const consultationSchema = new mongoose.Schema(
@@ -32,3 +33,21 @@ const ConsultationSchema = new mongoose.Schema({
 module.exports = mongoose.model("Consultation", ConsultationSchema);
 
 
+=======
+const mongoose = require("mongoose");
+
+const consultationSchema = new mongoose.Schema(
+  {
+    clientName: { type: String, required: true },
+    clientEmail: { type: String },
+    astrologerName: { type: String, required: true },
+    type: { type: String, enum: ["Chat", "Audio", "Video"], required: true },
+    status: { type: String, enum: ["Pending", "In Progress", "Completed"], default: "Pending" },
+    scheduledAt: { type: Date, default: Date.now },
+    notes: { type: String },
+  },
+  { timestamps: true }
+);
+
+module.exports = mongoose.model("Consultation", consultationSchema);
+>>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b

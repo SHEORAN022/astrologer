@@ -1,4 +1,5 @@
 const express = require("express");
+<<<<<<< HEAD
 const router = express.Router(); // Make sure this line exists!
 const Remedy = require("../models/Remedy");
 
@@ -74,5 +75,22 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+=======
+const router = express.Router();
+const upload = require("../middleware/upload");
+const {
+  getRemedies,
+  createRemedy,
+  getRemedyById,
+  updateRemedy,
+  deleteRemedy,
+} = require("../controllers/remedyController");
+
+router.get("/", getRemedies);
+router.get("/:id", getRemedyById);
+router.post("/", upload.single("file"), createRemedy);
+router.put("/:id", upload.single("file"), updateRemedy);
+router.delete("/:id", deleteRemedy);
+>>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 
 module.exports = router;

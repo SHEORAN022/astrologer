@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -117,5 +118,15 @@ router.delete("/:id", async (req, res) => {
     res.status(400).json({ message: "Error deleting client" });
   }
 });
+=======
+const express = require('express');
+const router = express.Router();
+const clientController = require('../controllers/clientController');
+
+router.get('/', clientController.getClients);
+router.post('/', clientController.createClient);
+router.put('/:id', clientController.updateClient);
+router.delete('/:id', clientController.deleteClient);
+>>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 
 module.exports = router;
