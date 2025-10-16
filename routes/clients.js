@@ -1,70 +1,3 @@
-<<<<<<< HEAD
-
-
-
-// const express = require("express");
-// const router = express.Router();
-// const Client = require("../models/Client"); // import Client model
-
-// // GET all clients (with optional search)
-// router.get("/", async (req, res) => {
-//   try {
-//     const search = req.query.search || "";
-//     const clients = await Client.find({ name: { $regex: search, $options: "i" } });
-//     res.json(clients);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: err.message });
-//   }
-// });
-
-// // GET single client by ID
-// router.get("/:id", async (req, res) => {
-//   try {
-//     const client = await Client.findById(req.params.id);
-//     if (!client) return res.status(404).json({ msg: "Client not found" });
-//     res.json(client);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: err.message });
-//   }
-// });
-
-// // POST new client
-// router.post("/", async (req, res) => {
-//   try {
-//     const newClient = new Client(req.body);
-//     const savedClient = await newClient.save();
-//     res.status(201).json(savedClient);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(400).json({ error: err.message });
-//   }
-// });
-
-// // PUT update client
-// router.put("/:id", async (req, res) => {
-//   try {
-//     const updatedClient = await Client.findByIdAndUpdate(req.params.id, req.body, { new: true });
-//     if (!updatedClient) return res.status(404).json({ msg: "Client not found" });
-//     res.json(updatedClient);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(400).json({ error: err.message });
-//   }
-// });
-
-// // DELETE client
-// router.delete("/:id", async (req, res) => {
-//   try {
-//     const deleted = await Client.findByIdAndDelete(req.params.id);
-//     if (!deleted) return res.status(404).json({ msg: "Client not found" });
-//     res.json({ msg: "Client deleted successfully" });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ error: err.message });
-//   }
-// });
 const express = require("express");
 const router = express.Router();
 const Client = require("../models/Client");
@@ -118,15 +51,5 @@ router.delete("/:id", async (req, res) => {
     res.status(400).json({ message: "Error deleting client" });
   }
 });
-=======
-const express = require('express');
-const router = express.Router();
-const clientController = require('../controllers/clientController');
-
-router.get('/', clientController.getClients);
-router.post('/', clientController.createClient);
-router.put('/:id', clientController.updateClient);
-router.delete('/:id', clientController.deleteClient);
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 
 module.exports = router;
