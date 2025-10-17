@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const express = require('express');
 // const router = express.Router();
 // const Transaction = require('../models/Transaction');
@@ -22,7 +21,6 @@
 //   await Transaction.findByIdAndDelete(req.params.id);
 //   res.json({ message: 'Transaction deleted' });
 // });
-=======
 // const express = require("express");
 // const router = express.Router();
 // const {
@@ -38,12 +36,10 @@
 // router.post("/", createTransaction);
 // router.put("/:id", updateTransaction);
 // router.delete("/:id", deleteTransaction);
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 
 // module.exports = router;
 
 const express = require('express');
-<<<<<<< HEAD
 const router = express.Router();
 const {
   getTransactions,
@@ -107,7 +103,6 @@ router.put('/:id', authenticate, requireAdmin, updateTransaction);
 
 // Delete transaction
 router.delete('/:id', authenticate, requireAdmin, deleteTransaction);
-=======
 const Transaction = require('../models/Transaction');
 const router = express.Router();
 
@@ -120,6 +115,5 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: 'Error fetching transactions' });
   }
 });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 
 module.exports = router;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 // const Client = require('../models/Client');
 
@@ -11,7 +10,6 @@
 //       query.name = { $regex: search, $options: "i" }; // case-insensitive search
 //     }
 //     const clients = await Client.find(query).sort({ createdAt: -1 });
-=======
 // // const Client = require("../models/Client");
 
 // // // Create Client
@@ -74,7 +72,6 @@
 // exports.getClients = async (req, res) => {
 //   try {
 //     const clients = await Client.find().sort({ createdAt: -1 });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 //     res.json(clients);
 //   } catch (error) {
 //     res.status(500).json({ message: 'Failed to fetch clients', error });
@@ -112,7 +109,6 @@
 //     res.status(500).json({ message: 'Failed to delete client', error });
 //   }
 // };
-<<<<<<< HEAD
 
 const Client = require("../models/Client");
 
@@ -169,7 +165,6 @@ exports.deleteClient = async (req, res) => {
     res.json({ msg: "Client deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
-=======
 const Client = require('../models/Client');
 
 // ✅ Get all clients (with optional search by name)
@@ -216,6 +211,5 @@ exports.deleteClient = async (req, res) => {
     res.json({ message: 'Client deleted successfully' });
   } catch (error) {
     res.status(500).json({ message: 'Failed to delete client', error });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 };

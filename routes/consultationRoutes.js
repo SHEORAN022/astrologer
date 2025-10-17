@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const express = require("express");
 // const router = express.Router();
 // const {
@@ -112,7 +111,6 @@ router.delete("/:id", async (req, res) => {
 module.exports = router;
 
 
-=======
 const express = require("express");
 const router = express.Router();
 const {
@@ -128,4 +126,3 @@ router.put("/:id", updateConsultation);
 router.delete("/:id", deleteConsultation);
 
 module.exports = router;
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const express = require("express");
 // const router = express.Router();
 // const paymentController = require("../controllers/paymentController");
@@ -50,7 +49,6 @@ router.post("/verify", async (req, res) => {
     res.status(500).json({ success: false, message: "Verification failed" });
   }
 });
-=======
 
 const express = require('express');
 const router = express.Router();
@@ -58,6 +56,5 @@ const { createOrder, verifyPayment } = require('../controllers/paymentController
 
 router.post('/create-order', createOrder);
 router.post('/verify', verifyPayment);
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 
 module.exports = router;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const Consultation = require("../models/Consultation");
 
 // // Get all consultations
@@ -122,7 +121,6 @@ exports.deleteConsultation = async (req, res) => {
   } catch (err) {
     console.error("❌ Delete Error:", err.message);
     res.status(400).json({ success: false, error: err.message });
-=======
 const Consultation = require("../models/Consultation");
 
 // Get all consultations
@@ -174,6 +172,5 @@ exports.deleteConsultation = async (req, res) => {
     res.json({ message: "Consultation deleted successfully" });
   } catch (err) {
     res.status(500).json({ message: "Failed to delete consultation", error: err });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 };

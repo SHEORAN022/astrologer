@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 // const Razorpay = require('razorpay');
@@ -535,7 +534,6 @@ const Razorpay = require("razorpay");
 const Transaction = require("../models/Transaction");
 
 // ✅ Initialize Razorpay with correct environment variables
-=======
 // const Razorpay = require("razorpay");
 // const crypto = require("crypto");
 // const Transaction = require("../models/Transaction");
@@ -620,13 +618,11 @@ const Razorpay = require('razorpay');
 const crypto = require('crypto');
 const Transaction = require('../models/Transaction');
 
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
-<<<<<<< HEAD
 // Check if keys are loaded
 if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
   console.error("❌ Razorpay keys missing! Please check your .env file");
@@ -705,7 +701,6 @@ exports.saveTransaction = async (req, res) => {
 };
 
 // ✅ Verify Payment (Optional - for frontend signature verification)
-=======
 exports.createOrder = async (req, res) => {
   try {
     const { amount, clientName, clientEmail, notes } = req.body;
@@ -735,12 +730,10 @@ exports.createOrder = async (req, res) => {
   }
 };
 
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
 exports.verifyPayment = async (req, res) => {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
-<<<<<<< HEAD
     const crypto = require("crypto");
     const hmac = crypto.createHmac("sha256", process.env.RAZORPAY_KEY_SECRET);
     hmac.update(razorpay_order_id + "|" + razorpay_payment_id);
@@ -754,7 +747,6 @@ exports.verifyPayment = async (req, res) => {
   } catch (err) {
     console.error("❌ Payment verification error:", err.message);
     res.status(500).json({ success: false, message: "Payment verification failed" });
-=======
     const sign = `${razorpay_order_id}|${razorpay_payment_id}`;
     const expected = crypto
       .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
@@ -781,6 +773,5 @@ exports.verifyPayment = async (req, res) => {
   } catch (err) {
     console.error('Verify error:', err);
     res.status(500).json({ message: 'Verification failed' });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 };

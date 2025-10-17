@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const express = require('express');
 // const router = express.Router();
 // const Feedback = require('../models/Feedback');
@@ -71,7 +70,6 @@ router.delete('/:id', adminAuth, async (req,res)=>{
     res.status(200).json({ message:"Feedback deleted successfully" });
   }catch(err){
     res.status(500).json({ message: err.message });
-=======
 
 const express = require("express");
 const router = express.Router();
@@ -110,7 +108,6 @@ router.delete("/:id", async (req, res) => {
     res.status(200).json({ message: "Feedback deleted successfully" });
   } catch (err) {
     res.status(500).json({ error: err.message });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 });
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 const Transaction = require("../models/Transaction");
@@ -351,7 +350,6 @@ exports.createTransaction = async (req, res) => {
       message: "Failed to create transaction",
       error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
     });
-=======
 // const Transaction = require("../models/Transaction");
 
 // // Get all transactions
@@ -437,14 +435,12 @@ exports.createTransaction = async (req, res) => {
     res.status(201).json(transaction);
   } catch (err) {
     res.status(400).json({ message: "Failed to create transaction", error: err });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 };
 
 // Update transaction
 exports.updateTransaction = async (req, res) => {
   try {
-<<<<<<< HEAD
     const { id } = req.params;
     const updates = req.body;
 
@@ -581,19 +577,16 @@ exports.updateTransaction = async (req, res) => {
       message: "Failed to update transaction",
       error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
     });
-=======
     const updated = await Transaction.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.json(updated);
   } catch (err) {
     res.status(400).json({ message: "Failed to update transaction", error: err });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 };
 
 // Delete transaction
 exports.deleteTransaction = async (req, res) => {
   try {
-<<<<<<< HEAD
     const { id } = req.params;
 
     console.log('🗑️ Deleting transaction:', id);
@@ -993,11 +986,9 @@ exports.searchTransactions = async (req, res) => {
       message: "Search failed",
       error: process.env.NODE_ENV === 'development' ? err.message : 'Internal server error'
     });
-=======
     await Transaction.findByIdAndDelete(req.params.id);
     res.json({ message: "Transaction deleted successfully" });
   } catch (err) {
     res.status(500).json({ message: "Failed to delete transaction", error: err });
->>>>>>> efd1034d73f8736393e914cd597bd707ab3ed49b
   }
 };
